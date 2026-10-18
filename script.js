@@ -171,41 +171,57 @@ document.querySelectorAll(".task")
 
         task.addEventListener("click", () => {
 
-            const taskName =
-                task.dataset.task;
+            const taskName = task.dataset.task;
+
+            const taskIndex =
+                userData.completedTasks.indexOf(taskName);
 
 
-            // Already completed
+            // ЕСЛИ ЗАДАНИЕ УЖЕ ВЫПОЛНЕНО
+            // снимаем отметку
 
-            if (
-                userData.completedTasks.includes(taskName)
-            ) {
+            if (taskIndex !== -1) {
 
-                return;
+                userData.completedTasks.splice(
+                    taskIndex,
+                    1
+                );
+
+                task.classList.remove("completed");
+
+                // Возвращаем XP
+                userData.xp = Math.max(
+                    0,
+                    userData.xp - 10
+                );
+
+                // Возвращаем прогресс
+                userData.goalProgress = Math.max(
+                    0,
+                    userData.goalProgress - 1
+                );
 
             }
 
 
-            task.classList.add("completed");
+            // ЕСЛИ ЗАДАНИЕ НЕ ВЫПОЛНЕНО
+            // ставим отметку
 
+            else {
 
-            userData.completedTasks.push(
-                taskName
-            );
+                userData.completedTasks.push(
+                    taskName
+                );
 
+                task.classList.add("completed");
 
-            // Give XP
+                userData.xp += 10;
 
-            userData.xp += 10;
+                userData.goalProgress = Math.min(
+                    100,
+                    userData.goalProgress + 1
+                );
 
-
-            // Small progress increase
-
-            userData.goalProgress += 1;
-
-
-            if (userData.goalProgress > 100) {
-                userData.goalProgress = 100;
             }
 
 
@@ -216,6 +232,8 @@ document.querySelectorAll(".task")
         });
 
     });
+
+
 
 
 // -----------------------------
