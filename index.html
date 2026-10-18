@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FluentPath</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            Fluent<span>Path</span>
+        </div>
+
+        <nav class="nav">
+
+            <button class="nav-item active" data-page="home">
+                <span>⌂</span>
+                Home
+            </button>
+
+            <button class="nav-item" data-page="roadmap">
+                <span>◈</span>
+                Roadmap
+            </button>
+
+            <button class="nav-item" data-page="learn">
+                <span>▣</span>
+                Learn
+            </button>
+
+            <button class="nav-item" data-page="vocabulary">
+                <span>◇</span>
+                Vocabulary
+            </button>
+
+            <button class="nav-item" data-page="practice">
+                <span>◎</span>
+                Practice
+            </button>
+
+            <button class="nav-item" data-page="mistakes">
+                <span>!</span>
+                Error Bank
+            </button>
+
+            <button class="nav-item" data-page="stats">
+                <span>▥</span>
+                Progress
+            </button>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="streak">
+                🔥
+                <div>
+                    <strong id="streakNumber">1 day</strong>
+                    <span>Current streak</span>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- HOME -->
+        <section class="page active-page" id="home">
+
+            <header class="topbar">
+
+                <div>
+                    <p class="small-label">OCTOBER → JANUARY</p>
+                    <h1>Good evening 👋</h1>
+                </div>
+
+                <div class="level-badge">
+                    <span>Current level</span>
+                    <strong id="currentLevel">A0</strong>
+                </div>
+
+            </header>
+
+
+            <!-- B1 GOAL -->
+            <section class="goal-card">
+
+                <div class="goal-header">
+
+                    <div>
+                        <p class="small-label">MAIN GOAL</p>
+                        <h2>Reach B1 English</h2>
+                    </div>
+
+                    <div class="goal-percent" id="goalPercent">
+                        4%
+                    </div>
+
+                </div>
+
+                <div class="progress-bar">
+                    <div
+                        class="progress-fill"
+                        id="mainProgress"
+                        style="width: 4%;">
+                    </div>
+                </div>
+
+                <div class="goal-info">
+                    <span>Starting level: A0</span>
+                    <span>Target: B1 · January 31</span>
+                </div>
+
+            </section>
+
+
+            <!-- GRID -->
+            <div class="dashboard-grid">
+
+                <!-- TODAY -->
+                <section class="card today-card">
+
+                    <div class="card-title">
+                        <div>
+                            <p class="small-label">DAILY ROUTINE</p>
+                            <h2>Today's plan</h2>
+                        </div>
+
+                        <span class="time">
+                            ~60 min
+                        </span>
+                    </div>
+
+
+                    <div class="task-list">
+
+                        <button class="task" data-task="vocabulary">
+
+                            <span class="task-check"></span>
+
+                            <div>
+                                <strong>Vocabulary review</strong>
+                                <p>20 words · 10 min</p>
+                            </div>
+
+                            <span class="task-arrow">→</span>
+
+                        </button>
+
+
+                        <button class="task" data-task="grammar">
+
+                            <span class="task-check"></span>
+
+                            <div>
+                                <strong>Grammar lesson</strong>
+                                <p>Verb “to be” · 15 min</p>
+                            </div>
+
+                            <span class="task-arrow">→</span>
+
+                        </button>
+
+
+                        <button class="task" data-task="listening">
+
+                            <span class="task-check"></span>
+
+                            <div>
+                                <strong>Listening</strong>
+                                <p>Beginner dialogue · 15 min</p>
+                            </div>
+
+                            <span class="task-arrow">→</span>
+
+                        </button>
+
+
+                        <button class="task" data-task="speaking">
+
+                            <span class="task-check"></span>
+
+                            <div>
+                                <strong>Speaking</strong>
+                                <p>Introduce yourself · 10 min</p>
+                            </div>
+
+                            <span class="task-arrow">→</span>
+
+                        </button>
+
+
+                        <button class="task" data-task="practice">
+
+                            <span class="task-check"></span>
+
+                            <div>
+                                <strong>Daily challenge</strong>
+                                <p>Mixed practice · 10 min</p>
+                            </div>
+
+                            <span class="task-arrow">→</span>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- STATS -->
+                <section class="card stats-card">
+
+                    <p class="small-label">YOUR ENGLISH</p>
+                    <h2>Skill overview</h2>
+
+
+                    <div class="skill">
+
+                        <div>
+                            <span>Vocabulary</span>
+                            <strong>8%</strong>
+                        </div>
+
+                        <div class="mini-progress">
+                            <div style="width: 8%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <div>
+                            <span>Grammar</span>
+                            <strong>5%</strong>
+                        </div>
+
+                        <div class="mini-progress">
+                            <div style="width: 5%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <div>
+                            <span>Listening</span>
+                            <strong>3%</strong>
+                        </div>
+
+                        <div class="mini-progress">
+                            <div style="width: 3%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <div>
+                            <span>Speaking</span>
+                            <strong>2%</strong>
+                        </div>
+
+                        <div class="mini-progress">
+                            <div style="width: 2%"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <div>
+                            <span>Writing</span>
+                            <strong>3%</strong>
+                        </div>
+
+                        <div class="mini-progress">
+                            <div style="width: 3%"></div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- ROADMAP PREVIEW -->
+            <section class="roadmap-preview">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="small-label">YOUR JOURNEY</p>
+                        <h2>A0 → B1 Roadmap</h2>
+                    </div>
+
+                    <button
+                        class="text-button"
+                        id="openRoadmap">
+                        View roadmap →
+                    </button>
+
+                </div>
+
+
+                <div class="levels">
+
+                    <div class="level active-level">
+
+                        <div class="level-circle">
+                            A0
+                        </div>
+
+                        <div>
+                            <strong>Starter</strong>
+                            <span>In progress</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="level-line"></div>
+
+
+                    <div class="level">
+
+                        <div class="level-circle">
+                            A1
+                        </div>
+
+                        <div>
+                            <strong>Beginner</strong>
+                            <span>October</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="level-line"></div>
+
+
+                    <div class="level">
+
+                        <div class="level-circle">
+                            A2
+                        </div>
+
+                        <div>
+                            <strong>Elementary</strong>
+                            <span>November</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="level-line"></div>
+
+
+                    <div class="level">
+
+                        <div class="level-circle">
+                            B1
+                        </div>
+
+                        <div>
+                            <strong>Intermediate</strong>
+                            <span>January</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- WORDS -->
+            <div class="bottom-grid">
+
+                <section class="card">
+
+                    <p class="small-label">
+                        VOCABULARY
+                    </p>
+
+                    <div class="big-number">
+                        <span id="wordsLearned">0</span>
+                        <small>words learned</small>
+                    </div>
+
+                    <p class="muted">
+                        <span id="wordsDue">20</span>
+                        words due for review today
+                    </p>
+
+                    <button
+                        class="primary-button"
+                        id="reviewWords">
+                        Review words
+                    </button>
+
+                </section>
+
+
+                <section class="card">
+
+                    <p class="small-label">
+                        WEAK AREAS
+                    </p>
+
+                    <h2>Needs attention</h2>
+
+                    <div class="weak-item">
+
+                        <span>Verb “to be”</span>
+                        <strong>42%</strong>
+
+                    </div>
+
+                    <div class="weak-item">
+
+                        <span>Listening</span>
+                        <strong>31%</strong>
+
+                    </div>
+
+                    <div class="weak-item">
+
+                        <span>Word order</span>
+                        <strong>28%</strong>
+
+                    </div>
+
+                    <button
+                        class="secondary-button"
+                        id="weakPractice">
+                        Practice weak areas
+                    </button>
+
+                </section>
+
+
+                <section class="card quote-card">
+
+                    <p class="small-label">
+                        TODAY'S REMINDER
+                    </p>
+
+                    <h2>
+                        You don't need perfect English.
+                    </h2>
+
+                    <p>
+                        You need English you can actually use.
+                    </p>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+        <!-- PLACEHOLDER PAGES -->
+
+        <section class="page" id="roadmap">
+
+            <p class="small-label">LEARNING PATH</p>
+
+            <h1>Roadmap</h1>
+
+            <p class="page-description">
+                Your complete path from A0 to B1.
+            </p>
+
+            <div class="placeholder">
+                Roadmap is coming next.
+            </div>
+
+        </section>
+
+
+        <section class="page" id="learn">
+
+            <p class="small-label">LESSONS</p>
+
+            <h1>Learn</h1>
+
+            <p class="page-description">
+                Grammar, vocabulary and real English.
+            </p>
+
+            <div class="placeholder">
+                Lessons will appear here.
+            </div>
+
+        </section>
+
+
+        <section class="page" id="vocabulary">
+
+            <p class="small-label">VOCABULARY</p>
+
+            <h1>Words</h1>
+
+            <p class="page-description">
+                Learn words and review them with spaced repetition.
+            </p>
+
+            <div class="placeholder">
+                Vocabulary system is coming.
+            </div>
+
+        </section>
+
+
+        <section class="page" id="practice">
+
+            <p class="small-label">PRACTICE</p>
+
+            <h1>Practice</h1>
+
+            <p class="page-description">
+                Listening, speaking, writing and mixed exercises.
+            </p>
+
+            <div class="placeholder">
+                Practice modes are coming.
+            </div>
+
+        </section>
+
+
+        <section class="page" id="mistakes">
+
+            <p class="small-label">ERROR BANK</p>
+
+            <h1>Your mistakes</h1>
+
+            <p class="page-description">
+                Every mistake becomes a future exercise.
+            </p>
+
+            <div class="placeholder">
+                No mistakes yet. Suspicious.
+            </div>
+
+        </section>
+
+
+        <section class="page" id="stats">
+
+            <p class="small-label">PROGRESS</p>
+
+            <h1>Your progress</h1>
+
+            <p class="page-description">
+                See what is improving and what needs more work.
+            </p>
+
+            <div class="placeholder">
+                Statistics will appear here.
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
